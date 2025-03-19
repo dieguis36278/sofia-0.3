@@ -1,0 +1,216 @@
+*,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  body {
+    font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
+    color: #333;
+    font-weight: 300;
+  }
+  .container {
+    margin: 0 auto; 
+    width: 90%;
+    max-width: 1400px;
+  }
+  img {
+    width: 100%;
+  }
+  .section-title {
+    padding-top: 2rem ;
+    padding-bottom: 1rem;
+  }
+
+main{
+    margin-top: 2rem;
+}
+.main-text{
+    padding-bottom: 1rem;
+}
+  /* cards */
+.container-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.card {
+    width: 100%;
+    aspect-ratio: 2;
+    border-radius: 10px;
+    display: flex;
+    justify-content: end;
+    color: white;
+    flex-direction: column;
+}
+.card-content {
+    padding: 0 1.5rem;
+    padding-bottom: 1rem ;
+}
+
+.card-details {
+    display: flex;
+    gap: 2rem;
+}
+.card-1 {
+    background-image: url("./img/enallt.jpg");
+}
+.card-2 {
+    background-image: url("./img/osaka.jpeg");
+}
+.card-3 {
+    background-image: url("./img/osaka.jpeg");
+}
+
+.container-classes {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+/*
+ CSS for the main interaction
+*/
+.accordion > input[type="checkbox"] {
+    position: absolute;
+    left: -100vw;
+  }
+  
+  .accordion .content {
+    overflow-y: hidden;
+    height: 0;
+    transition: height 0.9s ease;
+  }
+  
+  .accordion > input[type="checkbox"]:checked ~ .content {
+    height: auto;
+    overflow: visible;
+  }
+ 
+  .accordion label {
+    display: block;
+  
+  }
+  
+  /*
+   Styling
+  */
+ 
+  
+  .accordion {
+    margin-bottom: 1em;
+  }
+  
+  .accordion > input[type="checkbox"]:checked ~ .content {
+    padding: 15px;
+    border: 1px solid #e8e8e8;
+    border-top: 0px;
+  }
+  
+  .accordion .handle {
+    margin: 0;
+    font-size: 1.125em;
+    line-height: 1.2em;
+  }
+  
+  .accordion label {
+    color: #333;
+    cursor: pointer;
+    font-weight: normal;
+    padding: 15px;
+    background: #e8e8e8;
+  }
+  
+  .accordion label:hover,
+  .accordion label:focus {
+    background: #d8d8d8;
+  }
+  
+  .accordion .handle label:before {
+    font-family: 'fontawesome';
+    content: "➡️";
+    display: inline-block;
+    margin-right: 10px;
+    font-size: .88em;
+    line-height: 1.556em;
+    vertical-align: middle;
+  }
+  
+  .accordion > input[type="checkbox"]:checked ~ .handle label:before {
+    content: "⬇️";
+  }
+  
+  
+  /*
+   Demo purposes only
+  */
+  
+  .accordion {
+    max-width: 1400px;
+  }
+  
+  .accordion p:last-child {
+    margin-bottom: 0;
+  }
+
+.contact-title {
+    font-weight: bold;
+}
+.section-copy {
+    border-top: #333;
+    border-width: 10px;
+    border: 1px solid #333;
+    border-bottom: 0; 
+    border-left: 0;
+    border-right: 0; 
+    margin-top: 2rem ;
+    margin-bottom: 1rem ;
+}
+.copyright {
+    width: 80%;
+    margin: 1rem auto;
+    text-align: center;
+}
+.classes-sub-group {
+    margin: 10px solid red;
+}
+
+.classes-sub-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; 
+}
+.class {
+    flex:1;
+    
+}
+.price {
+    font-weight: bold;
+}
+
+@media (min-width: 600px) {
+
+    .classes-sub-group {
+        flex-direction: row;
+    }
+    
+    .container-cards {
+        flex-direction: row;
+    }
+    .card {
+        height: 400px;
+        aspect-ratio: 0;
+    }
+    .main-content {
+        display: flex;
+    }
+    .main-text {
+        flex: 1; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .main-img {
+        flex:1; 
+    }
+}
